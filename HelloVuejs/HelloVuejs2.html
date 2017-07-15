@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{ message }}</p>
+        <span v-bind:title="message">Hello Span</span>
+  <span v-bind:title="message2">Hello Span</span>
+    </div>
+    <script type="text/javascript">
+        var app=new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!',
+                message2: "My Message2"
+            }
+        });
+
+      
+    </script>
+</body>
+</html>

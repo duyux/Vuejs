@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+      <ul>
+          <li v-for="todo in todos">
+             {{todo.text}}
+          </li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+        new Vue({
+            el: '#app',
+            data: {
+                todos: [
+                      { text: 'JavaScript' },
+                      { text: 'Learn Vue.js' },
+                      { text:'Building Something Awesome'}
+                ]
+            }
+        })
+    </script>
+</body>
+</html>

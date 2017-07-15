@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>组件学习2</title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+</head>
+<body>
+     <div id="app">
+        <ol>
+            <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>
+        </ol>
+    </div>
+
+        <script type="text/javascript">
+            //定义一个组件
+            Vue.component('todo-item', {
+                props:['todo'],
+                template: '<li>{{todo.text}}</li>'
+            });
+
+            // 创建根实例
+            new Vue({
+                el: '#app',
+                data: {
+                    groceryList: [
+                        { text: '蔬菜' },
+                        { text: '奶酪'},
+                        { text:'随便吃什么'}
+
+                    ]
+                }
+
+            });
+
+
+        </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://unpkg.com/vue"></script>
+<script>
+
+
+   function mytest(){
+      alert('fdfdfdf');
+   }
+</script>
+
+</head>
+<body>
+    <div id="app">
+      <my-component v-on:myevent='mytest' ></my-component>
+    </div>
+</body>
+
+<script>
+   // 注册
+Vue.component('my-component', {
+  template: '<div>A custom component!</div>',
+     mounted: function () {
+           this.$emit("myevent");
+     }
+})
+
+new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue.js!'
+  },
+ methods: {
+  
+    }
+})
+</script>
+
+</html>
