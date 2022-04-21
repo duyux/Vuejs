@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>学习ES6</title>
+    <meta charset="utf-8" />
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+       <p>{{message}}</p>
+       <button @click="test" >Click Me!</button>
+    </div>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue.js!'
+            },
+            methods: {
+                test: function () {
+                    var d=0;
+                    for(let i=0;i<10;i++){
+                        d=i+1;
+                    }
+                    alert(d);
+                }
+            }
+        });
+
+       
+       
+    </script>
+</body>
+</html>
