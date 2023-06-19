@@ -1,0 +1,12 @@
+docker exec -it 4a3b04741056 bash
+
+
+sudo docker exec 4a3b04741056 /var/www/onlyoffice/documentserver/npm/json -f /etc/onlyoffice/documentserver/local.json 'services.CoAuthoring.secret.session.string'
+
+docker cp local.json 4a3b04741056:/etc/onlyoffice/documentserver/ && docker exec -it 4a3b04741056 /bin/bash -c "supervisorctl restart all"
+
+
+
+sudo docker exec 4a3b04741056 sudo supervisorctl start ds:example
+
+sudo docker exec 4a3b04741056 sudo sed 's,autostart=false,autostart=true,' -i /etc/supervisor/conf.d/ds-example.conf

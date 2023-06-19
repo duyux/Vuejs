@@ -207,7 +207,7 @@ export default {
      setColumn(){
                 luckysheet.setCellValue(2, 5, "test")
                 var firstSheet=luckysheet.getLuckysheetfile()[0]
-                firstSheet.celldata
+               luckysheet.enterEditMode=1
             }
 
   }
