@@ -1,7 +1,0 @@
-{
-  "eslint.workingDirectories": [
-    "./onlyoffice-server",
-    "./onlyoffice-vue"
-  ],
-  "vetur.validation.interpolation": false
-}

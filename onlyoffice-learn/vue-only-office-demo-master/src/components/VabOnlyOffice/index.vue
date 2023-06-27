@@ -127,7 +127,8 @@
             'fodp', 'odp', 'otp', 'pot', 'potm', 'potx', 'pps', 'ppsm', 'ppsx', 'ppt', 'pptm', 'pptx',
         ]
         if (fileTypesDoc.includes(fileType)) {
-            docType = 'text'
+            //docType = 'text'
+            docType="word"
         }
         if (fileTypesCsv.includes(fileType)) {
             docType = 'spreadsheet'
