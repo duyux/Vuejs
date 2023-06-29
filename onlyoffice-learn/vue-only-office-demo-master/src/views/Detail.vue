@@ -24,8 +24,19 @@ export default {
                 isPrint: true,
                 user: {
                   id: 1,
-                  name: '张三'
+                  name: 'du'
                 },
+                // customization: {
+                //     // 强制保存
+                //     forcesave: true,
+                //     features: {
+                //         // 关闭拼写检查
+                //         spellcheck: false
+                //     }
+                //  },
+                 
+
+
                
             },
             show: false,
@@ -38,11 +49,12 @@ export default {
             // list:[
             //     {name:'我的文档1.docx',id:1,title:'我的文档1.docx',url:'http://59.215.190.105:8080/uploadfile_gzcg/test3.docx',fileType:'docx'},
             // ]
+          
             // list:[
-            //     {name:'我的文档1.docx',id:1,title:'我的文档1.docx',url:'http://10.209.35.9:80/uploadfile_gzcg/a11ec150-dd37-4863-9706-faf03a9c686b.docx',fileType:'docx'},
+            //     {name:'我的文档1.docx',id:1,title:'我的文档1.docx',url:'http://59.215.190.105:8080/uploadfile_gzcg/zydoc.docx',fileType:'docx'},
             // ]
             list:[
-                {name:'我的文档1.docx',id:1,title:'我的文档1.docx',url:'http://59.215.190.105:8080/uploadfile_gzcg/zydoc.docx',fileType:'docx'},
+                {name:'我的文档1.docx',id:1,title:'我的文档1.doc',url:'http://192.168.235.133:8080/data/zydoc.docx',fileType:'docx'},
             ]
         }
     },
@@ -63,6 +75,7 @@ export default {
             this.option.title = optionTemp.title
             this.option.url = optionTemp.url
             this.option.fileType = optionTemp.fileType
+            //this.option.editUrl="http://192.168.1.106:8085/docx/save?path="+optionTemp.name  //后端保存
             console.log(this.option)
             this.show = true
         }
