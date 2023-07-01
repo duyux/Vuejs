@@ -94,7 +94,8 @@ export default defineComponent({
     onDocumentReady() {
         console.log("Document is loaded");
         //创建connector连接器
-        console.log('开始创建connector',this.$refs.docEditor)
+        //console.log('开始创建connector',this.$refs.docEditor)
+        console.log('开始创建connector',this.$refs)
         this.connector = this.$refs.docEditor.createConnector();
         console.log('end创建connector',this.connector)
     },

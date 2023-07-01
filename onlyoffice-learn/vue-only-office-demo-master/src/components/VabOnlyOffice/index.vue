@@ -1,7 +1,7 @@
 <!--onlyoffice 编辑器-->
 <template>
   <div>
-    <button @click="search">search - api调用</button>
+    <!-- <button @click="search">search - api调用</button> -->
     <div id='vabOnlyOffice'>
      
     </div>
@@ -177,3 +177,12 @@
     },
   }
 </script>
+<style >
+i icon toolbar__icon btn-menu-about
+ {
+    visibility: hidden !important;
+  }
+
+ 
+</style>
+
