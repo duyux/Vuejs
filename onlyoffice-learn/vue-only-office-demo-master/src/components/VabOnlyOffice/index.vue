@@ -105,11 +105,12 @@
             mode:option.model?option.model:'edit',
            
             customization: {
+                    help:true,
                     // 强制保存
                     forcesave: true,
                     features: {
                         // 关闭拼写检查
-                        spellcheck: false
+                        spellcheck: true
                     },
             //         review: {
             //           hideReviewDisplay: false,
@@ -177,10 +178,17 @@
     },
   }
 </script>
-<style >
+<style scoped="true">
 i icon toolbar__icon btn-menu-about
  {
     visibility: hidden !important;
+  }
+  /* #header-logo{
+    visibility: hidden !important;
+  } */
+
+  .extra #header-logo i{
+    display: none !important;
   }
 
  

@@ -75,7 +75,7 @@ export default {
             // this.option.editUrl="http://2.0.1.5:8090/FileServer/docxSave?token=admin&path="+optionTemp.name  //后端保存
             //this.option.editUrl="http://127.0.0.1:8090/FileServer/docxSave?path="+optionTemp.name  //后端保存
             //this.option.editUrl="http://192.168.1.106:8085/docx/save?path="+optionTemp.name  //后端保存
-            this.option.editUrl="http://192.168.1.106:8085/docx/save?path=zydoc.docx"  //后端保存
+           // this.option.editUrl="http://192.168.1.106:8085/docx/save?path=zydoc.docx"  //后端保存
             console.log(this.option)
             this.show = true
         }
