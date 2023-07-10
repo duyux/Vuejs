@@ -136,7 +136,7 @@
             onAppReady: this.onAppReady,
           },
           width: '100%',
-          height: '700px',
+          height: '600px',
           token:option.token||""
         }
         console.log('config111',config)
