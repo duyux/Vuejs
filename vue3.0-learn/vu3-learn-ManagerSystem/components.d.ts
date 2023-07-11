@@ -51,7 +51,6 @@ declare module '@vue/runtime-core' {
     ElTooltip: typeof import('element-plus/es')['ElTooltip']
     ElUpload: typeof import('element-plus/es')['ElUpload']
     GsapNumber: typeof import('./src/components/gsap/GsapNumber.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     'IEp:zoomIn': typeof import('~icons/ep/zoom-in')['default']
     'IEp:zoomOut': typeof import('~icons/ep/zoom-out')['default']
     IEpAddLocation: typeof import('~icons/ep/add-location')['default']
