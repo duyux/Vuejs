@@ -24,6 +24,7 @@ const openReadmeInEditor = () => fetch('/__open-in-editor?file=README.md')
   <WelcomeItem>
     <template #icon>
       <ToolingIcon />
+      
     </template>
     <template #heading>Tooling</template>
 
