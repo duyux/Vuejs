@@ -1,8 +1,8 @@
-function getString(str:String):String{
-    return "Hello,"+str;
-}
-let str:String="TypeScript!!!"
-console.log(getString(str));
+// function getString(str:String):String{
+//     return "Hello,"+str;
+// }
+// let str:String="TypeScript!!!"
+// console.log(getString(str));
 
 // var list1:Array<number>=[1,2,3];
 // var list2:number[]=[1,2,3];
@@ -22,8 +22,10 @@ console.log(getString(str));
 // console.log(direction);
 
 
-//先赋值为数字
-var some1:any=1;
-//后修改为字符串
-some1="Hello any type"
-console.log(some1)
+// //先赋值为数字
+// var some1:any=1;
+// //后修改为字符串
+// some1="Hello any type"
+// console.log(some1)
+
+
