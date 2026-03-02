@@ -1,10 +1,8 @@
 <!--onlyoffice 编辑器-->
 <template>
   <div>
-    <!-- <button @click="search">search - api调用</button> -->
-    <div id='vabOnlyOffice'>
-     
-    </div>
+    <button @click="search">search - api调用</button>
+    <div id='vabOnlyOffice'></div>
   </div>
 </template>
 
@@ -48,13 +46,10 @@
     methods: {
       search() {
         // eslint-disable-next-line no-undef,no-unused-vars
-        this.connector = this.docEditor.createConnector();
-        console.log('end创建connector',this.connector)
- 
         this.connector.callCommand(
           function() {
             var oDocument = Api.GetDocument();
-            var aSearch = oDocument.Search("编制人");
+            var aSearch = oDocument.Search("ONLYOFFICE");
             aSearch[0].Select();
           },
           function(a){
@@ -78,7 +73,7 @@
             permissions: {
               edit: option.isEdit,//是否可以编辑: 只能查看，传false
               print: option.isPrint,
-              download: true,
+              download: false,
               fillForms: true,//是否可以填写表格，如果将mode参数设置为edit，则填写表单仅对文档编辑器可用。 默认值与edit或review参数的值一致。
               review: true //跟踪变化
             },
@@ -103,54 +98,22 @@
               name:option.user.name
             },
             mode:option.model?option.model:'edit',
-           
-            customization: {
-                    help:true,
-                    // 强制保存
-                    forcesave: true,
-                    features: {
-                        // 关闭拼写检查
-                        spellcheck: true
-                    },
-            //         review: {
-            //           hideReviewDisplay: false,
-            //           showReviewChanges: false,
-            //           reviewDisplay: "original",
-            //           trackChanges: true,
-            //           hoverMode: false
-            //         },
-                    customer: {
-                        ad: "My City, 123a-45",
-                        info: "Some additional information",
-                        logo: "https://tenfei01.cfp.cn/creative/vcg/800/version23/VCG41175510742.jpg",
-                        logoDark: "https://example.com/dark-logo-big.png",
-                        mail: "john@example.com",
-                        name: "John Smith and Co.",
-                        phone: "123456789",
-                        www: "example.com"
-                    },
-            },
-
           },
           events: {
             onAppReady: this.onAppReady,
           },
           width: '100%',
-          height: '600px',
+          height: '800px',
           token:option.token||""
         }
         console.log('config111',config)
         // eslint-disable-next-line no-undef,no-unused-vars
         this.docEditor = new DocsAPI.DocEditor('vabOnlyOffice', config)
-        console.log('docEditor',this.docEditor)
-        //this.onAppReady();
       },
       // onlyOffice加载完成的回调
       onAppReady() {
         // 创建connector连接器
-        console.log('开始创建connector',this.docEditor)
         this.connector = this.docEditor.createConnector();
-        console.log('end创建connector',this.connector)
       },
       getFileType(fileType) {
         let docType = ''
@@ -164,8 +127,7 @@
             'fodp', 'odp', 'otp', 'pot', 'potm', 'potx', 'pps', 'ppsm', 'ppsx', 'ppt', 'pptm', 'pptx',
         ]
         if (fileTypesDoc.includes(fileType)) {
-            //docType = 'text'
-            docType="word"
+            docType = 'text'
         }
         if (fileTypesCsv.includes(fileType)) {
             docType = 'spreadsheet'
@@ -178,19 +140,3 @@
     },
   }
 </script>
-<style scoped="true">
-i icon toolbar__icon btn-menu-about
- {
-    visibility: hidden !important;
-  }
-  /* #header-logo{
-    visibility: hidden !important;
-  } */
-
-  .extra #header-logo i{
-    display: none !important;
-  }
-
- 
-</style>
-

@@ -3,7 +3,7 @@
     <button @click="search">search - api调用</button>
       <DocumentEditor
       id="docEditor"
-      documentServerUrl="http://192.168.235.133:8080/onlyoffice/"
+      documentServerUrl="http://59.215.190.105:8080/onlyoffice/web-apps/apps/api/documents/api.js"
       :config="config"
       :events_onDocumentReady="onDocumentReady"
       />
@@ -27,9 +27,9 @@ export default defineComponent({
           fileType: "docx",
           key: "192.168.235.1test.docx1687050515280",
           title: "zydoc.docx",
-          url: "http://192.168.235.133:8080/data/zydoc.docx",
+          // url: "http://192.168.235.133:8080/data/zydoc.docx",
           //url: "http://59.215.190.105:8080/uploadfile_gzcg/test3.docx"
-          // url: "https://d2nlctn12v279m.cloudfront.net/assets/docs/samples/demo.docx"
+          url: "https://d2nlctn12v279m.cloudfront.net/assets/docs/samples/demo.docx",
           permissions: {
             edit:true, //是否可以编辑: 只能查看，传false
             print: true,
