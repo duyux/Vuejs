@@ -43,7 +43,8 @@ export default {
       // 2. 创建 script 标签
       const script = document.createElement('script');
       // 使用官方演示服务器的 SDK (生产环境请替换为你的服务器地址)
-      script.src = 'https://site.docs.onlyoffice.com/web-apps/apps/api/documents/api.js?preload=placeholder'; 
+      // script.src = 'https://site.docs.onlyoffice.com/web-apps/apps/api/documents/api.js?preload=placeholder'; 
+       script.src = 'http://192.168.235.133:8075/web-apps/apps/api/documents/api.js?preload=placeholder'; 
       script.async = true;
       script.onload = () => {
         this.status = 'SDK 加载成功，正在初始化编辑器...';
